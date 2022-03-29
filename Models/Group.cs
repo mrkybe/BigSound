@@ -6,6 +6,14 @@ namespace BigSound.Models
     [Serializable]
     public class Group
     {
+        public Group(Database.Group group)
+        {
+            Id = group.Id;
+            Name = group.Name;
+            ImageId = group.ImageId;
+            Deleted = group.Deleted;
+        }
+
         [Required]
         public Guid? Id { get; set; }
 
